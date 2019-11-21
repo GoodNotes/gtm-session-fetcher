@@ -1125,6 +1125,7 @@ NSString *const kGTMSessionFetcherUploadLocationObtainedNotification =
   [queryFetcher setRequestValue:@"query" forHTTPHeaderField:kGTMSessionHeaderXGoogUploadCommand];
 
   self.fetcherInFlight = queryFetcher;
+  self.chunkFetcher = queryFetcher;
   [queryFetcher beginFetchWithDelegate:self
                      didFinishSelector:@selector(queryFetcher:finishedWithData:error:)];
 }
